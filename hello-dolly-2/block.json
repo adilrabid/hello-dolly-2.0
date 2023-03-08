@@ -1,0 +1,8 @@
+{
+  "apiVersion": 2,
+  "title": "Hello Dolly 2.0",
+  "name": "adilrabid/hello-dolly-2-block",
+  "category": "common",
+  "icon": "pets",
+  "editorScript": "file:./build/index.js"
+}
