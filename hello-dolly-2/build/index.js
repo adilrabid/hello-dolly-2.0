@@ -1,6 +1,1 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	
-/******/ 	
-/******/ })()
-;
+(()=>{"use strict";function e(){return e=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var l=arguments[t];for(var o in l)Object.prototype.hasOwnProperty.call(l,o)&&(e[o]=l[o])}return e},e.apply(this,arguments)}const t=window.wp.element,l=window.wp.blocks,o=window.wp.blockEditor;(0,l.registerBlockType)("adilrabid/hello-dolly-2-block",{attributes:{bg_color:{type:"string",default:"#000000"},text_color:{type:"string",default:"#ffffff"}},edit:l=>{let{attributes:r,setAttributes:n}=l;const c=(0,o.useBlockProps)();return(0,t.createElement)(t.Fragment,null,(0,t.createElement)(o.BlockControls,null),(0,t.createElement)(o.InspectorControls,{key:"setting"},(0,t.createElement)("div",{id:"gutenpride-controls"},(0,t.createElement)("fieldset",null,(0,t.createElement)("legend",{className:"blocks-base-control__label"},"Text color"),(0,t.createElement)(o.ColorPalette,{onChange:e=>{n({text_color:e})}})),(0,t.createElement)("fieldset",null,(0,t.createElement)("legend",{className:"blocks-base-control__label"},"Background color"),(0,t.createElement)(o.ColorPalette,{onChange:e=>{n({bg_color:e})}})))),(0,t.createElement)("p",e({},c,{style:{backgroundColor:r.bg_color,color:r.text_color,padding:"16px 10px",textAlign:"center"}})," Hello Dolly 2.0 "))}})})();

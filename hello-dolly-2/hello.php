@@ -11,6 +11,9 @@ Author: Matt Mullenweg and Adil
 Version: 1.0
 */
 
+define('HD2_DIR_URL', plugin_dir_url(__FILE__));
+define('HD2_DIR_PATH', plugin_dir_path(__FILE__));
+
 class WPHelloDolly {
 	public function __construct() {
 		add_action( 'admin_notices', array( $this, 'hello_dolly' ) );
@@ -20,7 +23,7 @@ class WPHelloDolly {
 
 	public function onInit() {
 //		register_block_type( __DIR__ );
-		register_block_type( __DIR__, array(
+		register_block_type( HD2_DIR_PATH, array(
 			'render_callback' => array( $this, 'hello_dolly_2_render_callback' )
 		) );
 	}
