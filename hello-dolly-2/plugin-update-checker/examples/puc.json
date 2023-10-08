@@ -1,0 +1,9 @@
+{
+	"name": "Hello Dolly 2.0",
+	"version": "1.0",
+	"download_url": "http://example.com/updates/example-plugin.zip",
+
+	"sections": {
+		"description": "The supercharged hello dolly plugin."
+	}
+}

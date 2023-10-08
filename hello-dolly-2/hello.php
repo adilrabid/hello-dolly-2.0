@@ -14,6 +14,19 @@ Version: 1.0
 define('HD2_DIR_URL', plugin_dir_url(__FILE__));
 define('HD2_DIR_PATH', plugin_dir_path(__FILE__));
 
+require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/adilrabid/hello-dolly-2.0.git',
+	__FILE__,
+	'hello-dolly-2'
+);
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+//Optional: If you're using a private repository, specify the access token like this:
+// $myUpdateChecker->setAuthentication('your-token-here');
+
+
 class WPHelloDolly {
 	public function __construct() {
 		add_action( 'admin_notices', array( $this, 'hello_dolly' ) );
