@@ -1,21 +1,26 @@
 <?php
+
 /**
  * @package Hello_Dolly_2
- * @version 1.6
+ * @version 1.0
  */
 
 /*
 Plugin Name: Hello Dolly 2.0
-Description: The supercharged hello dolly plugin.
-Author: Matt Mullenweg and Adil
 Version: 1.0
+Description: The supercharged hello dolly plugin.
+Author: Adil
+Author URI: https://adilarham.com/
+Text Domain: hello-dolly-2
 */
 
 define('HD2_DIR_URL', plugin_dir_url(__FILE__));
 define('HD2_DIR_PATH', plugin_dir_path(__FILE__));
 
 require 'plugin-update-checker/plugin-update-checker.php';
+
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
 $myUpdateChecker = PucFactory::buildUpdateChecker(
 	'https://github.com/adilrabid/hello-dolly-2.0.git',
 	__FILE__,
@@ -27,34 +32,39 @@ $myUpdateChecker->setBranch('main');
 // $myUpdateChecker->setAuthentication('your-token-here');
 
 
-class WPHelloDolly {
-	public function __construct() {
-		add_action( 'admin_notices', array( $this, 'hello_dolly' ) );
-		add_action( 'init', array( $this, 'onInit' ) );
-		add_action( 'admin_head', array( $this, 'dolly_css' ) );
+class WPHelloDolly
+{
+	public function __construct()
+	{
+		add_action('admin_notices', array($this, 'hello_dolly'));
+		add_action('init', array($this, 'onInit'));
+		add_action('admin_head', array($this, 'dolly_css'));
 	}
 
-	public function onInit() {
-//		register_block_type( __DIR__ );
-		register_block_type( HD2_DIR_PATH, array(
-			'render_callback' => array( $this, 'hello_dolly_2_render_callback' )
-		) );
+	public function onInit()
+	{
+		//		register_block_type( __DIR__ );
+		register_block_type(HD2_DIR_PATH, array(
+			'render_callback' => array($this, 'hello_dolly_2_render_callback')
+		));
 	}
 
-	public function hello_dolly_2_render_callback( ) {
+	public function hello_dolly_2_render_callback()
+	{
 		ob_start();
-		?>
-        <h1>A Random Title</h1>
-        <p>
+?>
+		<h1>A Random Title</h1>
+		<p>
 			<?php echo $this->hello_dolly_get_lyric(); ?>
-        </p>
+		</p>
 
-		<?php
+<?php
 
 		return ob_get_clean();
 	}
 
-	public function hello_dolly_get_lyric() {
+	public function hello_dolly_get_lyric()
+	{
 		/** These are the lyrics to Hello Dolly */
 		$lyrics = "Hello, Dolly
 		Well, hello, Dolly
@@ -86,20 +96,22 @@ class WPHelloDolly {
 		Dolly'll never go away again";
 
 		// Here we split it into lines
-		$lyrics = explode( "\n", $lyrics );
+		$lyrics = explode("\n", $lyrics);
 
 		// And then randomly choose a line
-		return wptexturize( $lyrics[ mt_rand( 0, count( $lyrics ) - 1 ) ] );
+		return wptexturize($lyrics[mt_rand(0, count($lyrics) - 1)]);
 	}
 
 	// This just echoes the chosen line, we'll position it later
-	public function hello_dolly() {
+	public function hello_dolly()
+	{
 		$chosen = $this->hello_dolly_get_lyric();
 		echo "<p id='dolly'>$chosen</p>";
 	}
 
 	// We need some CSS to position the paragraph
-	public function dolly_css() {
+	public function dolly_css()
+	{
 		// This makes sure that the positioning is also good for right-to-left languages
 		$x = is_rtl() ? 'left' : 'right';
 
