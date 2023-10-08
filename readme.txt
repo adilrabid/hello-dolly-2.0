@@ -44,20 +44,10 @@ Answer to foo bar dilemma.
 
 == Changelog ==
 
-= 1.1.0 =
-* New feature added.
-
-= 1.0.0 =
-* A change since the previous version.
-* Another change.
-
 = 0.1.0 =
 * List versions from most recent at top to oldest at bottom.
 
 == Upgrade Notice ==
-
-= 1.0.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
 
 = 0.1.0 =
 This version fixes a security related bug.  Upgrade immediately.
