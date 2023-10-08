@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Hello Dolly 2.0
-Version: 0.1.0
+Version: 1.0.0
 Plugin URI: https://github.com/adilrabid/hello-dolly-2.0
 Description: The supercharged hello dolly plugin.
 Author: Adil

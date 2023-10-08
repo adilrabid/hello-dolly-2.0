@@ -3,7 +3,7 @@ Contributors: Adil
 Donate link: https://adilarham.com/
 Tags: 0.0.1, 1.0.0, 1.1.0
 Requires at least: 5.0
-Tested up to: 6.2
+Tested up to: 6.3
 Stable tag: 1.0
 Requires PHP: 7.0
 License: GPLv2 or later
@@ -44,10 +44,16 @@ Answer to foo bar dilemma.
 
 == Changelog ==
 
+= 1.0.0 =
+* Some features added.
+
 = 0.1.0 =
 * List versions from most recent at top to oldest at bottom.
 
 == Upgrade Notice ==
+
+= 1.0.0 =
+* Checkout this new features.
 
 = 0.1.0 =
 This version fixes a security related bug.  Upgrade immediately.
