@@ -8,6 +8,7 @@
 /*
 Plugin Name: Hello Dolly 2.0
 Version: 1.0
+Plugin URI: https://github.com/adilrabid/hello-dolly-2.0
 Description: The supercharged hello dolly plugin.
 Author: Adil
 Author URI: https://adilarham.com/
@@ -22,7 +23,7 @@ require 'plugin-update-checker/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $myUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://github.com/adilrabid/hello-dolly-2.0.git',
+	'https://github.com/adilrabid/hello-dolly-2.0',
 	__FILE__,
 	'hello-dolly-2'
 );
