@@ -28,15 +28,11 @@ class WPHelloDolly {
 		) );
 	}
 
-	public function hello_dolly_2_render_callback( $block_attributes, $content ) {
+	public function hello_dolly_2_render_callback( ) {
 		ob_start();
 		?>
-        <p style="
-                padding: 15px;
-                text-align: center;
-                color: <?php echo $block_attributes['text_color'] ?>;
-                background-color: <?php echo $block_attributes['bg_color'] ?>;
-                ">
+        <h1>A Random Title</h1>
+        <p>
 			<?php echo $this->hello_dolly_get_lyric(); ?>
         </p>
 

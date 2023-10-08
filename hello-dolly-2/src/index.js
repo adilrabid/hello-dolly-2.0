@@ -9,7 +9,7 @@ import {
     ColorPalette,
     InspectorControls,
 } from '@wordpress/block-editor';
-
+import ServerSideRender from '@wordpress/server-side-render';
 
 // Register the block
 registerBlockType('adilrabid/hello-dolly-2-block', {
@@ -66,14 +66,17 @@ registerBlockType('adilrabid/hello-dolly-2-block', {
                         </fieldset>
                     </div>
                 </InspectorControls>
-                <p
-                    {...blockProps}
-                    style={{
-                        backgroundColor: attributes.bg_color,
-                        color: attributes.text_color,
-                        padding: '16px 10px',
-                        textAlign: 'center',
-                    }}> Hello Dolly 2.0 </p>
+                <ServerSideRender
+                    block="adilrabid/hello-dolly-2-block"
+                />
+                {/*<p*/}
+                {/*    {...blockProps}*/}
+                {/*    style={{*/}
+                {/*        backgroundColor: attributes.bg_color,*/}
+                {/*        color: attributes.text_color,*/}
+                {/*        padding: '16px 10px',*/}
+                {/*        textAlign: 'center',*/}
+                {/*    }}> Hello Dolly 2.0 </p>*/}
             </>
         );
     },
