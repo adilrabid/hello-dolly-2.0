@@ -1,11 +1,11 @@
 === Hello Dolly 2.0 ===
 Contributors: Adil
 Donate link: https://adilarham.com/
-Tags: 0.1, 1.0
-Requires at least: 7.0
-Tested up to: 7.4
+Tags: 0.0.1, 1.0.0, 1.1.0
+Requires at least: 5.0
+Tested up to: 6.2
 Stable tag: 1.0
-Requires PHP: 7.4
+Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,19 +44,22 @@ Answer to foo bar dilemma.
 
 == Changelog ==
 
-= 1.0 =
+= 1.1.0 =
+* New feature added.
+
+= 1.0.0 =
 * A change since the previous version.
 * Another change.
 
-= 0.5 =
+= 0.1.0 =
 * List versions from most recent at top to oldest at bottom.
 
 == Upgrade Notice ==
 
-= 1.0 =
+= 1.0.0 =
 Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
 
-= 0.5 =
+= 0.1.0 =
 This version fixes a security related bug.  Upgrade immediately.
 
 == A brief Markdown Example ==
