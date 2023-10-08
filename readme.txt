@@ -42,11 +42,6 @@ An answer to that question.
 
 Answer to foo bar dilemma.
 
-== Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Screenshots are stored in the /assets directory.
-2. This is the second screen shot
-
 == Changelog ==
 
 = 1.0 =
