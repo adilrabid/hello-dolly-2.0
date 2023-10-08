@@ -1,10 +1,4 @@
 <?php
-
-/**
- * @package Hello_Dolly_2
- * @version 1.0
- */
-
 /*
 Plugin Name: Hello Dolly 2.0
 Version: 0.1.0
